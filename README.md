@@ -1,6 +1,6 @@
 # Sgep Front
 
-A SGEP é um projeto de ponto, voltado para pequenas, médias e grandes empresas. 
+A SGEP é um projeto de ponto para marcar as entradas e saídas do horário de expediente, com isso podendo solicitar férias, folga ou remuneção baseado na horas-extras feita. O sistema é voltado para pequenas, médias e grandes empresas. 
 
 # Para dar start no projeto irá precisar do NodeJs 
 
