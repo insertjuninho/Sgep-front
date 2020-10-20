@@ -1,4 +1,6 @@
-# SgepFront
+# Sgep Front
+
+A SGEP é um projeto de ponto, voltado para pequenas, médias e grandes empresas. 
 
 # Para dar start no projeto irá precisar do NodeJs 
 
