@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, Input, ElementRef, ViewChild, TemplateRef, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import * as moment from 'moment';
 
 
 @Component({
@@ -28,5 +28,20 @@ export class EntradaComponent implements OnInit {
       dataEntrada: ['', Validators.required],
       obs: ['', Validators.required]
     })
+  }
+
+verify(){
+
+  if(this.validaFormGroup.valid){
+    let hrEntrada
+    let dataEntrada
+    if (this.validaFormGroup.value['hrEntrada'] && this.validaFormGroup.value['dataEntrada']) {
+      hrEntrada = moment(this.validaFormGroup.value['hrEntrada']).format()
+      dataEntrada = moment(this.validaFormGroup.value['datdataEntradaeFinal']).format()
+    } else {
+      dataEntrada = ''
+      dataEntrada = ''
+    }
+  }
   }
 }
