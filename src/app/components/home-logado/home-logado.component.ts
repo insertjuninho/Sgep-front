@@ -14,4 +14,9 @@ export class HomeLogadoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  entrada(){
+    console.log("CHEGUEI")
+    this.router.navigateByUrl("/entrada");
+  }
 }

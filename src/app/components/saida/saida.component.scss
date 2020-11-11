@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.container{
+    border: solid 1px;
+    border-radius: 12px;
+    margin-top: 97px;
+    border-color: antiquewhite;
+}
+
+.head{
+    display: flex;
+    position: relative;
+    place-content: space-between;
+}
+
+.arrow{
+    position: absolute;
+    font-size: 25px;
+    margin-left: -45px;
+    margin-top: 3px;
+    color: red;
+}
+
+textarea{
+    width: 60% !important;
+    height: 16rem !important;
+    display: flex;
+    margin: auto;
+}
