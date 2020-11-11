@@ -1,1 +1,39 @@
-<p>saida works!</p>
+<section class="container">
+    <section>
+        <div class="head">
+            <h1 class="h1">Sistema SGEP</h1>
+            <a routerLink="/home">
+                <i class="icon-arrow-left2 arrow"></i>
+                <h2>Voltar para o Ínicio</h2>
+            </a>
+        </div>
+      </section>
+    
+    <form enctype="multipart/form-data" [formGroup]="validaFormGroup">
+    <h1>
+        Lançar Saída
+    </h1>
+    <div class="dtSaida">
+        <label>
+            Data:
+            <input placeholder="Data:" [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1"
+             formControlName="datatSaida">
+            <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+        </label>
+    </div>
+
+<div class="example-wrapper">
+   
+    <label>
+        Hora:
+        <input placeholder="Hora:" type="datetime" [owlDateTimeTrigger]="hrSaida" [owlDateTime]="hrSaida"
+        formControlName="hrSaida">
+        <owl-date-time [pickerType]="'timer'" #hrSaida></owl-date-time>
+    </label>
+</div>
+    <div class="example-wrapper">
+        <h3>Observações</h3>
+        <textarea formControlName="obs" id="obs" cols="30" rows="10"></textarea>
+    </div>
+    </form>
+</section>
