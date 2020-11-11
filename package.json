@@ -27,6 +27,7 @@
     "jquery": "^2.2.4",
     "materialize-angular": "^0.7.10",
     "materialize-css": "^1.0.0",
+    "moment": "^2.29.1",
     "ng-pick-datetime": "^7.0.0",
     "ngx-bootstrap": "^6.1.0",
     "rxjs": "~6.6.0",
