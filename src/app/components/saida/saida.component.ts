@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-saida',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaidaComponent implements OnInit {
 
-  constructor() { }
+  public validaFormGroup: FormGroup;
+  
+  constructor(
+    public router: Router,
+    private sgep: FormBuilder,
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.validaForm()
   }
 
+  validaForm (){
+    
+    this.validaFormGroup = this.sgep.group({
+      hrSaida: ['', Validators.required],
+      dataSaida: ['', Validators.required],
+      obs: ['', Validators.required]
+    })
+  }
 }
