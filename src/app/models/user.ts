@@ -10,3 +10,8 @@ export class User{
     email: string;
     cpf: string;
 }
+
+export interface UserSignin {
+    email: string;
+    senha: string;
+  }

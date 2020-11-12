@@ -1,32 +1,28 @@
-<div class="container">
-	<div class="row">
-  <main>
-     <div class="container">
-      <div class="section"><i class="mdi-alert-error red-text"></i></div>
-      
-  
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input matInput formControlName="login" type="text" autocomplete="login" />
-                <label for='email'>Username</label>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='input-field col m12'>
-                <input matInput type="password" formControlName="password" autocomplete="password" id="password" name="password" />
-                <label for='password'>Password</label>
-              </div>
-              <label style='float: right;'>
-              <a><b style="color: #F5F5F5;">Forgot Password?</b></a>
-              </label>
-            </div>
-            <br/>
-              <div class='row'>
-                <button style="margin-left:65px;"  type='submit' name='btn_login' class='col  s6 btn btn-small white black-text  waves-effect z-depth-1 y-depth-1'  (click)="doSignIn()">Login</button>
-              </div>
-           </div>
-         </main>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-	</div>
+<div class="_login">
+  <section class="_auth">
+     <div class="_content">
+        <div class="img"></div>
+
+        <div class="form-content">
+           <h1 class="title">LOGIN</h1>
+           <p class="access">Preencha os dados abaixo</p>
+
+           <form [formGroup]="auth" action="" class="_auth--form">
+              <mat-form-field appearance="outline">
+                 <mat-label>Usuário</mat-label>
+                 <input matInput formControlName="email" type="text" autocomplete="gs-login-admin" />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                 <mat-label>Senha</mat-label>
+                 <input matInput type="password" formControlName="senha" autocomplete="gs-login-admin-password"
+                    id="password" name="senha" />
+              </mat-form-field>
+
+              <button type="submit" mat-button color="primary" (click)="doSignIn()">
+                 ENTRAR
+              </button>
+           </form>
+        </div>
+     </div>
+  </section>
 </div>

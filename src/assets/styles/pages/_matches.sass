@@ -1,0 +1,140 @@
+.matchStyle
+    display: grid
+    grid-template-columns: 1fr
+    grid-column-gap: 30px
+    @include respond-to('medium')
+        grid-template-columns: 1fr 1fr    
+.matchButtons
+    display: flex
+    justify-content: center      
+    margin-top: 20px  
+    button
+        background: $primary-color
+        color: $color-white
+        @for $i from 2 through 2 
+            &:nth-child(#{$i}) 
+                margin-left: 30px
+
+.mat-horizontal-stepper-header
+    pointer-events: none !important
+.mat-step-icon-selected, .mat-step-icon-state-done 
+    background: $primary-color !important
+    font-weight: bold !important
+   
+
+.matchShiled
+    display: flex
+    align-items: center
+    .matchImg
+        display: flex
+        flex-flow: column
+    button
+        width: 215px
+        margin-top: -17px
+    img    
+        width: 70px
+        margin: -10px auto auto 15px 
+
+
+.addWave
+    background: $primary-color
+    padding: 0 10px
+    margin: 10px auto !important
+    color: $color-white
+    height: 36px 
+    
+.waves
+    background: #dbdbdb    
+    min-height: 40px
+    padding: 0 0 0 15px
+    .wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #c4c4c4
+        font-size: 12px
+        &:last-child
+            border: none  
+        .nivel
+            display: flex
+            flex-direction: row                    
+            
+    table
+        font-family: arial, sans-serif
+        border-collapse: collapse
+        td, th 
+            border: 1px solid #dddddd
+            text-align: left
+            padding: 8px  
+            &:nth-child(n+2)
+                text-align: center 
+            button
+                background: transparent
+                border: none
+                margin-left: 15px    
+.wavesForm
+    display: grid
+    grid-template-columns: 1fr
+    justify-content: center
+    grid-gap: 30px
+    @include respond-to('medium')
+        max-width: 1200px
+        margin: auto
+        grid-template-columns: 1fr 1fr 
+
+    .inputGroup
+        max-height: 200px
+        overflow-y: auto
+        display: flex
+        margin: 10px 0
+        flex-flow: column
+        position: relative
+        &::-webkit-scrollbar 
+            width: 5px
+        &::-webkit-scrollbar-track 
+            background: #f0f0f0
+        &::-webkit-scrollbar-thumb 
+            background: rgba(252, 5, 5, 0.4)
+        label
+           background: #f0f0f0 
+           color: #3C454C
+           padding: 15px  10px 15px
+           margin-top: 15px
+           cursor: pointer
+           display: block
+           position: relative
+           width: 95%
+           &:after
+                width: 20px
+                height: 20px
+                content: ''
+                border: 1px solid $primary-color
+                background-color: transparent
+                border-radius: 50%
+                z-index: 2
+                position: absolute
+                right: 30px
+                top: 50%
+                -webkit-transform: translateY(-50%)
+                        transform: translateY(-50%)
+                cursor: pointer
+                -webkit-transition: all 200ms ease-in
+                transition: all 200ms ease-in
+        input:checked ~ label 
+            &:after
+                background: $primary-color     
+//ERROR IN WAVES FORM
+.nullValue
+    color: $primary-color
+.errorCamp
+    border: solid 2px $primary-color   
+
+//TABLE 
+
+
+
+    
+                    
+                    
+
+                

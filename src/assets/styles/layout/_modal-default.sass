@@ -1,0 +1,45 @@
+.modal-default
+    position: relative
+    .modal-default-close
+        position: absolute
+        top: -10px
+        right: 10px
+        background: transparent
+        border: none
+        outline: none
+.editFormDefault
+    margin-top: 20px
+    .imagesRows
+        display: flex
+        flex-flow: column
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        text-align: center
+        @include respond-to('medium')
+            flex-flow: row
+            justify-content: space-around
+        .DesktopImage, .MobileImage
+            display: flex
+            justify-content: center
+            flex-direction: column
+        img
+            width: 207px
+            height: 107px
+            object-fit: contain
+            margin-bottom: 20px
+        label, .labelBtn
+            background: $primary-color
+            color: $color-white
+            max-width: 80px
+            padding: 10px
+            @include border-radius(50px)
+            margin: auto  
+            text-align: center  
+            cursor: pointer
+        .MobileImage
+            label
+                background: $color-black
+                color: $color-white
+
+            

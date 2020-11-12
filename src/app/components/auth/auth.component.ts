@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { noop } from 'rxjs';
 import { CustomValidators } from 'src/app/util/custom-validatos';
-// import { AuthService } from "../../services/auth.service";
+import { AuthService } from "../../services/auth.service";
+import { map } from "rxjs/operators";
+
 @Component({
   selector: 'auth',
   templateUrl: './auth.component.html',
@@ -11,45 +14,36 @@ import { CustomValidators } from 'src/app/util/custom-validatos';
 export class AuthComponent implements OnInit {
   public isSignUp: boolean;
   public auth: FormGroup;
- 
+  
   constructor(
-    // public authService: AuthService,
-    private sgep: FormBuilder,
-   // public customValidator: CustomValidators,
-    public router: Router,
+     public authService: AuthService,
+     private sgep:       FormBuilder,
+     public router:      Router,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.validaLogin()
   }
 
-  // validaLogin(){
-  //   this.auth = this.sgep.group({
-  //     login: [
-  //       "",
-  //       Validators.compose([Validators.maxLength(120), Validators.required])
-  //     ],
-  //     passwords: this.sgep.group(
-  //       {
-  //         password: ["", Validators.required],
-  //       },
-  //       { validator: this.customValidator.MatchPassword }
-  //     )
-  //   });
-  // }
-
+   validaLogin(){
+    this.auth = this.sgep.group({
+      email: ['', Validators.required],
+      senha: ['', Validators.required]
+    },
+    );
+   }
+   
   doSignIn() {
-    console.log("to aq")
-  //   if (this.validaLogin.valid) {
-
-  //     this.loading = true;
-
-  //     this.validaLogin.value.login = this.validaLogin.value.login.trim().toLowerCase();
-
-  //     this.doLogin(this.validaLogin.value);
-
-  //   } else {
-  //     this.errorUtility.showError(null, "Verifique os erros nos campos!");
-  //   }
-  // }
-  }
-}
+     if (this.auth.valid) {
+       let loginData = this.auth.value;
+        this.authService.login(loginData).pipe(
+          map(response =>{
+            console.log(response)
+            localStorage.setItem("user", JSON.stringify(response));
+           
+          })
+        ).subscribe(noop, err => console.log(err))
+       }
+     }
+  
+ }

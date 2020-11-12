@@ -1,0 +1,137 @@
+.btn-news
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 15px
+    .add-news-btn
+        padding: 10px
+        background: $primary-color
+        color: $color-white
+        border: none
+        @include transition(.3s)
+        &:focus, &:hover
+            background: $color-black
+            outline: none
+.system-filter
+    display: flex
+    flex-direction: row
+    align-items: center
+    list-style: none
+    li
+        margin: 0 15px 0 15px
+        cursor: pointer   
+        border-bottom: solid 3px transparent
+        font: 
+            family: $font1
+            weigth: bold
+            size: 20px
+        &.active
+            border-bottom: solid 3px $primary-color  
+.grid-new
+    margin-bottom: 20px
+    width: 90%
+    margin: 30px auto
+    @include respond-to('extra-large') 
+        margin: 61px auto 20px auto 
+        width: 95% 
+        column-gap: 30px
+.card-news 
+    list-style: none
+    margin: 0 auto
+    background: white
+    height: auto
+    min-width: 100%
+    max-width: 360px
+    @include box-shadow(-2px 4px 15px -8px rgba(0,0,0,0.75))
+    @include border-radius(0.25rem)
+    position: relative   
+    @include respond-to('extra-large')
+        width: 360px
+    
+    img
+        width: 100%
+        height: 200px
+        object-fit: cover
+        object-position: 100% 0
+        @include border-radius(5px 5px 0 0)
+
+    .type
+        position: absolute
+        top: 12rem
+        right: 0    
+    
+    .data
+        position: absolute
+        top: 0
+        right: 20px
+        background: $primary-color
+        width: 50px
+        height: 50px
+        color: #FFFFFF
+        text-align: center
+        font-family: $font1
+        font-weight: bold
+        @include box-sizing(border-box)
+        p
+            margin: 0
+            &:first-child
+                margin-top: 7px
+            &:last-child
+                text-transform: capitalize
+
+    .card-body
+        padding: 0 15px 0 15px
+        height: 186px
+        word-break: break-all
+        h1
+            font-size: 20px
+        
+    
+    .card-footer
+        //margin: auto 10px 20px 10px
+        padding: 10px 0 10px 0
+        display: flex    
+        justify-content: center
+        border-top: solid .1px #ccc
+        button
+            margin: auto 10px auto 10px
+            background: transparent
+            border: solid .1px #ccc
+            padding: 10px 15px
+            font-size: 15px
+            @include transition(.5s)
+        
+        .green
+            color: #4bb500
+            border-color: #4bb500
+            &:hover
+                background: #4bb500
+                color: #fff
+        
+        .red
+            color: #f00
+            border-color: #f00
+            &:hover
+                background: #f00
+                color: #fff
+            
+.images-wrapper
+    position: relative
+    .overlay
+       background: #fff
+       position: absolute 
+       width: 100%
+       height: 100%
+       top: 0
+       bottom: 0           
+        
+      
+
+   
+    
+            
+          
+                      
+            
+          
+           

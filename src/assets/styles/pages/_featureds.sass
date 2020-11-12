@@ -1,0 +1,83 @@
+.featured
+    position: relative
+    margin: 0px
+    background: $color-white
+    padding: 0
+    @include box-shadow( 1px 9px 17px -12px rgba(0,0,0,0.1))
+    @include border-radius(.2rem)
+    position: relative
+    height: 200px
+    @include respond-to('large')
+        height: 150px
+        width: 100%
+    @include respond-to('extra-large')
+        height: 190px                
+    img
+        width: 100%
+        height: 100%  
+        object-fit: cover
+.add
+    background: transparent
+    color: $color-white
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    @include transition(.5s)
+    color: $color-black
+    box-shadow: none
+    cursor: pointer
+    button
+        padding: 10px
+        margin-left: 15px
+        background: $primary-color
+        color: $color-white
+        border: none
+        @include transition(.3s)
+        &:focus, &:hover
+            background: $color-black
+            outline: none
+.head
+    position: absolute
+    display: flex
+    flex-flow: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    top: 0
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 75%)
+    .menuBtn
+        color: $color-white
+    p
+        margin-left: 15px
+        @extend %c-branco
+        font-weight: bold
+        font-size: 17px
+        text-shadow: 1px 1px $color-black  
+.mat-chip-list
+    position: absolute
+    bottom: 10px
+    right: 10px 
+    .mat-chip
+        background: $primary-color
+        color: $color-white
+        font-weight: bold
+        min-height: 22px
+        &:last-child
+            background: $color-black
+.cropper-buttons
+    margin-top: 30px
+    button
+        margin: auto 10px auto 10px
+        background: $primary-color
+        color: $color-white
+        font-weight: bold
+        @include border-radius(5px)
+        padding: 10px
+        &:last-child
+            background: $color-green
+.textarea
+    margin: 15px auto 15px auto        
+    
+            
+        
+         

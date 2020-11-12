@@ -1,0 +1,108 @@
+// ESTILOS ESTÃO PUXANDO DO NEWS'
+
+//MODAL     
+.customGrid
+    display: grid
+    grid-template-columns: 1fr
+    grid-column-gap: 30px 
+    grid-row-gap: 30px 
+    @include respond-to('medium')
+        grid-template-columns: 1fr 1fr      
+.videos-input-edit
+    max-width: 25px !important
+    display: flex
+.bannerModal
+    position: relative    
+    .overlay-btn-banner
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        bottom: 0
+        background: #fff
+        
+// .card-video
+//     min-width: auto
+//     width: 290px
+//     img
+//         height: 430px
+//         object-fit: contain
+//         object-position: center   
+
+// @include respond-to('extra-large')
+//     .videos
+//         column-gap: 10px 
+//         grid-template-columns: 1fr 1fr 1fr 1fr !important
+.grid-videos
+    display: grid
+    grid-template-columns: 1fr
+    max-width: 85%
+    grid-row-gap: 30px 
+    grid-column-gap: 30px 
+    margin: 30px auto 30px auto
+    @include respond-to('small')
+        grid-template-columns: 1fr 1fr 
+    @include respond-to('large')
+        grid-template-columns: 1fr 1fr 1fr
+    @include respond-to('extra-large')
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        max-width: 93%  
+    .card-video
+        height: 432px
+        width:  247px
+        margin: 0 auto
+        position: relative
+        @include border-radius(5px)
+        @include respond-to('small')
+            width:  100%
+        @include respond-to('extra-large')
+            width: 335px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: 50% 20%
+            @include border-radius(5px 5px)
+        .card-footer
+            position: absolute
+            bottom: 0
+            width: 100%
+            height: 50px
+            background: rgba(0, 0, 0, 0.8) 
+            display: flex
+            justify-content: center  
+            button
+                margin: auto 10px auto 10px
+                background: transparent
+                border: solid .1px #ccc
+                padding: 8px 13px
+                font-size: 15px
+                @include transition(.5s)
+            .green
+                color: #4bb500
+                border-color: #4bb500
+                &:hover
+                    background: #4bb500
+                    color: #fff
+            .red
+                color: #f00
+                border-color: #f00
+                &:hover
+                    background: #f00
+                    color: #fff
+             
+
+//FROM
+.classificação    
+    display: flex
+    flex-direction: column
+    margin-top: 4px
+    .mat-label
+        font-size: 12px !important 
+    .mat-checkbox
+        margin-top: 11px !important
+
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background
+        background-color: $primary-color !important
+
+  

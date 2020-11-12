@@ -1,0 +1,113 @@
+.primary-button 
+    background: $primary-color
+    color: white
+    border: 0
+    border-radius: 0
+    font-size: 14px
+    padding: em(8) em(18)
+    &:hover 
+        background: $primary-dark-color
+//CONFIGURAÇÕES DA PAGINA FLEXIVEL          
+.flex-page
+    @include respond-to('small')
+        position: relative !important
+        left: -100px !important
+        @include transition(all 0.5s ease-in-out )  
+.sidenav
+    grid-area: sidemenu 
+    z-index: 2
+    
+.toolbar
+    grid-area: toolbar
+    z-index: 2
+    height: 100%
+
+.page-content 
+    position: relative
+    left: 0 
+    grid-area: main 
+    @include transition(all 0.5s ease-in-out )  
+
+//CONFIGURÇÕES DA PAGINA FLEXIVEL
+.page-wrapper
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 50px 1fr 
+    width: 100%
+    height: 100vh
+    padding: 0
+    margin: 0
+    grid-template-areas: "toolbar toolbar" "main main"
+    @include respond-to('small')
+        grid-template-columns: 230px 1fr
+        grid-template-areas: "toolbar toolbar" "sidemenu main"
+._grid
+    margin-top: 61px
+    display: grid
+    grid-template-columns: 1fr
+    grid-column-gap: 30px
+    grid-row-gap: 30px
+    padding: 0 20px 0 0 
+    margin-bottom: 30px
+    @include respond-to('medium')
+        grid-template-columns: 1fr 1fr
+    
+    @include respond-to('large')
+        grid-template-columns: 1fr 1fr 1fr
+    
+    @include respond-to('extra-large')
+        grid-template-columns: 1fr 1fr 1fr 1fr
+button
+    cursor: pointer
+    &:focus
+        outline: none
+        box-shadow: none
+        border: none    
+.default-button
+    background: $primary-color
+    height: 61px
+    margin-top: 15px
+    @extend %c-branco
+    font-weight: bold
+    position: relative
+             
+        
+table.mceLayout, textarea.tinyMCE 
+    width: 100% !important
+       
+//MATERIAL TAB
+.editTab
+    display: grid
+    grid-template-columns: 1fr
+    gap: 30px
+    @include respond-to('medium')
+        grid-template-columns: 1fr 1fr    
+.mat-tab-group
+    min-height: 300px !important
+    .mat-tab-header
+        margin: 20px auto !important
+   
+    .mat-tab-label
+        color: #000 !important
+   
+    .mat-tab-label-active
+        font-weight: bold !important
+   
+    .mat-ink-bar
+        background:  $primary-color !important
+    // .mat-tab-body-wrapper
+    //     min-height: 500px !important
+
+.ngx-pagination .current 
+    background: $primary-color !important
+                   
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+
+/* Firefox */
+input[type=number] 
+  -moz-appearance: textfield
+                   

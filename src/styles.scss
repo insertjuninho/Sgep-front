@@ -38,6 +38,7 @@ $sgep-front-theme: mat-light-theme((
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 @import "~ng-pick-datetime/assets/style/picker.min.css";
+@import "assets/styles/_main.sass";
 //@import "sass/main";
 // Plus imports for other components in your app.
 

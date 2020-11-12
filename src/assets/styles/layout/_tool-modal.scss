@@ -1,0 +1,47 @@
+.ticket-card-new-add-tool-check {
+    // background-color: red;
+    b {
+        margin-bottom: 30px !important;
+    }
+    .head-inputs {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        // justify-content: space-around;
+        // display: none;
+        .input {
+            .input-text {
+
+               padding: 5px;
+            }
+            .input-label {
+            }
+        }
+        .insert-btn {
+            // display: none;
+            button {
+                height: 55px !important;
+                width: 100%;
+                height: auto;
+                border-radius: 8px;;
+                color: white;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .table {
+        .table-title {
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 2px;
+        }
+        width: 100%;
+        padding: 5px;
+        table {
+            width:100%;
+        }
+    }
+}
